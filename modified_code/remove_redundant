@@ -5,8 +5,8 @@
 
 rm(list=ls())
 
-source("/Users/Raghu/Documents/asthma/modified_code/individual_dir_info.R")
-source(libfile) #infogain_function.R
+source("/Users/Raghu/Documents/asthma2/modified_code/dir_info.R")
+source(libfile1) #infogain_function.R
 #source(libfile2)
 
 for (discretization.type in c(2,6)){
@@ -16,7 +16,7 @@ discret.folder = gsub("%",discretization.type,"discret%")
 
     ## read discrete data ##
     cluster.folder = gsub("%",cluster.type,"cluster%")
-    inputfile = gsub("%",cluster.type,"C%_discret_indiviudal_d!.txt")
+    inputfile = gsub("%",cluster.type,"!DiscretEW%.txt")
     inputfile = gsub("!",discretization.type,inputfile)
     #overall.inputfile = "discretEW%Individual%km_IGsort_samplescl6var10_NOalvmacro5.txt"
     #cluster.inputfile = gsub("%",cluster.type,overall.inputfile)
